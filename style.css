@@ -209,7 +209,6 @@ ul.main-menu a {
 }
 
 .light-theme .sun {
-  /* visibility: hidden; */
   opacity: 0;
 }
 
@@ -229,12 +228,10 @@ ul.main-menu a {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
-  /* height: 100vh; */
 }
 
 .pre-header::before {
   position: relative;
-  /* bottom: -0.1em; */
   content: "";
   display: inline-block;
   width: 0.9em;
@@ -270,10 +267,6 @@ ul.main-menu a {
 .hero-img svg {
   max-width: 80%;
 }
-
-/* .hero-img img {
-  max-width: 45rem;
-} */
 
 .title {
   font-weight: bold;
@@ -536,7 +529,6 @@ picture {
 }
 
 .gr-item-wrapper {
-  /* margin-bottom: 2rem; */
   margin: auto 3rem 2rem;
 }
 
@@ -622,7 +614,6 @@ picture {
   font-weight: bold;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -633,12 +624,10 @@ picture {
   font-weight: 400;
   font-size: 24px;
   transition: 0.6s ease;
-  /* border-radius: 0 3px 3px 0; */
   user-select: none;
   max-height: 2em;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -660,20 +649,11 @@ picture {
 }
 
 
-.signin {
-  margin-top: 15em;
-}
-
 .signin-header {
   text-align: center;
 }
 
-.signin-grid {
-  display: flex;
-  flex-direction: row;
-  padding-top: 5em;
-  justify-content: space-around;
-}
+
 
 .signin-wrapper {
   margin: 0px;
@@ -790,7 +770,31 @@ ul {
   .page_title {
     margin-bottom: 3rem;
   }
+  
+  .feature-container { 
+    display: flex;
+    flex-direction: column;
+    padding-left: 5em;
+  }
 
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 50px;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+  }
+
+  .signin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    padding: 5em 15em 0;
+    grid-column-gap: 2em;
+  }
+
+  .signin {
+    margin-top: 20em;
+  }
 
 
 }
@@ -849,6 +853,37 @@ ul {
 
   .hero-content {
     display: block;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 50px;
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+  }
+
+  .signin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 5em 5em 0;
+    grid-column-gap: 2em;
+  }
+
+  .signin {
+    margin-top: 15em;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .feature-container {
+    display: grid;
+    position: relative;
+    max-width: 130em;
+    width: 100%;
+    margin: 0px auto;
+    grid-template-columns: 1fr 3fr;
   }
 
 }
