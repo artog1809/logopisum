@@ -81,7 +81,9 @@ body {
 }
 
 nav {
+  position: -webkit-sticky;
   position: sticky;
+  top: 0;
   padding: 1.5rem 0rem;
   width: 100%;
   height: 8rem;
@@ -580,14 +582,10 @@ picture {
   grid-template-columns: 30px 1fr 30px;
   max-width: 100%;
   margin-top: 30em;
-  /* justify-content: center;
-  align-items: center; */
 }
 
-/* Hide the images by default */
-.mySlides {
-  /* display: none; */
-}
+
+
 
 .slide-container {
   display: flex;
@@ -757,7 +755,7 @@ ul {
   font-size: 1.5rem;
 }
 
-.socials { 
+.socials {
   width: 175px;
   display: flex;
   justify-content: space-between;
