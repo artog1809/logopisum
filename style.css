@@ -572,11 +572,12 @@ picture {
 }
 
 .slideshow-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
   max-width: 100%;
   margin-top: 30em;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
 }
 
 /* Hide the images by default */
@@ -624,13 +625,12 @@ picture {
   cursor: pointer;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
+  margin-top: 10rem;
   color: black;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 24px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  /* border-radius: 0 3px 3px 0; */
   user-select: none;
   max-height: 2em;
 }
@@ -640,6 +640,7 @@ picture {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 
 
 /*-----------------------------768--------------------------------*/
