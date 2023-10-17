@@ -516,7 +516,6 @@ picture {
 }
 
 .gr-item {
-
   background: rgb(var(--cardBackground));
   box-shadow: var(--shadow-md);
   opacity: 1;
@@ -621,7 +620,8 @@ picture {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   top: 50%;
   width: auto;
@@ -647,11 +647,68 @@ picture {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 
+.signin {
+  margin-top: 15em;
+}
+
+.signin-header { 
+  text-align: center;
+}
+
+.signin-grid { 
+  display: flex;
+  flex-direction: row;
+  padding-top: 5em;
+  justify-content: space-around;
+}
+
+.signin-wrapper{
+  margin: 0px;
+  max-width: 35rem;
+  text-align: start;
+}
+
+.signin-pic { 
+  max-width: 100%;
+}
+
+.signin-text {
+  margin-left: 1em;
+
+}
+
+.signin-item-title {
+  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.signin-item-text {
+  padding-top: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+
+.footer-subscribe {
+  padding-top: 15em;
+}
+
+.footer-wrap {
+  margin-top: -1em;
+}
 
 /*-----------------------------768--------------------------------*/
 @media screen and (min-width: 768px) {
@@ -679,8 +736,6 @@ picture {
   .page_title {
     margin-bottom: 3rem;
   }
-
-
 
 
 
