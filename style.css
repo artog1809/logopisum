@@ -10,6 +10,11 @@
   --swiper-theme-color: #007aff;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   font-size: 60%;
   text-size-adjust: 100%;
@@ -661,24 +666,24 @@ picture {
   margin-top: 15em;
 }
 
-.signin-header { 
+.signin-header {
   text-align: center;
 }
 
-.signin-grid { 
+.signin-grid {
   display: flex;
   flex-direction: row;
   padding-top: 5em;
   justify-content: space-around;
 }
 
-.signin-wrapper{
+.signin-wrapper {
   margin: 0px;
   max-width: 35rem;
   text-align: start;
 }
 
-.signin-pic { 
+.signin-pic {
   max-width: 100%;
 }
 
@@ -709,6 +714,57 @@ picture {
 .footer-wrap {
   margin-top: -1em;
 }
+
+.footer {
+  background: var(--secondary);
+  color: var(--textSecondary);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-info {
+  margin: 0 auto;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-col-header {
+  font-weight: bold;
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.info-col-list {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 60%;
+  line-height: 3rem;
+}
+
+.footer-socials {
+  margin: 0 auto;
+  max-width: 80%;
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.socials { 
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
 
 /*-----------------------------768--------------------------------*/
 @media screen and (min-width: 768px) {
