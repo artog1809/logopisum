@@ -468,31 +468,40 @@ picture {
   margin-top: 15rem;
 }
 
-.features-main-left {
-  flex: 1 1 0%;
-  margin-right: 4rem;
 
-}
 
 .fml-block {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;
   background: rgb(var(--cardBackground));
   box-shadow: var(--shadow-md);
-  opacity: 1;
   cursor: pointer;
   border-radius: 0.6rem;
   transition: opacity 0.2s ease 0s;
   font-size: 1.6rem;
   font-weight: bold;
+  opacity: 0.5;
 }
+
+.fml-block.active { 
+  opacity: 1;
+}
+
 
 .block-title {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
 }
+
 
 .firstblock-point {
   position: relative;
@@ -504,15 +513,13 @@ picture {
   z-index: 0;
   background-color: rgb(221, 9, 57);
   flex-shrink: 0;
+
 }
 
-.block-text {
-  padding-left: 3rem;
-  max-width: 35rem;
-  text-align: left;
-}
 
-.firstblock-main {
+
+.firstblock-main.show{
+  display: flex;
   padding-top: 1rem;
   max-width: 40rem;
   text-align: left;
@@ -520,31 +527,10 @@ picture {
 }
 
 
-.secondblock-point {
-  position: relative;
-  display: inline-block;
-  opacity: 0.8;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 100rem;
-  z-index: 0;
-  background-color: rgb(99, 172, 232);
-  opacity: 0.5;
-  flex-shrink: 0;
+.firstblock-main {
+  display: none;
 }
 
-.thirdblock-point {
-  position: relative;
-  display: inline-block;
-  opacity: 0.8;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 100rem;
-  z-index: 0;
-  background-color: rgb(124, 207, 158);
-  opacity: 0.5;
-  flex-shrink: 0;
-}
 
 .feature-container {
   display: grid;
@@ -798,7 +784,25 @@ ul {
   justify-content: space-between;
 }
 
+.features-main-right { 
+  position: relative;
+}
 
+
+.img-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.img-wrapper:first-child {
+  position: static;
+}
+
+.img-wrapper.show {
+  visibility: visible;
+}
 
 /*-----------------------------768--------------------------------*/
 @media screen and (min-width: 768px) {
@@ -852,8 +856,26 @@ ul {
     margin-top: 20em;
   }
 
+  .firstblock-main.show{
+    display: flex;
+    padding-top: 1rem;
+    text-align: left;
+    font-weight: 400;
+    min-width: 100%;
+  }
 
+  .fml-block {
+    min-width: 90%;
+  }
 
+  .features-main-left {
+    padding-left: 2em;
+  }
+
+  .block-text {
+    padding-left: 3rem;
+    text-align: left;
+  }
 }
 
 /*-----------------------------1024--------------------------------*/
@@ -950,4 +972,21 @@ ul {
     grid-template-columns: 1fr 3fr;
   }
 
+  .firstblock-main.show{
+    display: flex;
+    padding-top: 1rem;
+    max-width: 40rem;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  .features-main-left {
+    flex: 1 1 0%;
+  }
+
+  .block-text {
+    padding-left: 3rem;
+    max-width: 35rem;
+    text-align: left;
+  }
 }
